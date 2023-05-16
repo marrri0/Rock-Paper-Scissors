@@ -89,16 +89,6 @@ button:hover {
     width: 100px;
 }
 
-.footer {
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 900;
-    font-size: 20px;
-    position: absolute;
-    bottom: 0;
-    padding: 10px;
-    text-align: end;
-}
-
 @keyframes header-animation {
     0% {
       opacity: 0;
@@ -176,11 +166,6 @@ button:hover {
         box-shadow: none;
     }
     
-    .footer {
-        display: none;
-    }
-    
-
     .rock,
     .paper,
     .scissors {
