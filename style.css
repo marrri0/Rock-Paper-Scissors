@@ -110,7 +110,6 @@ button:hover {
     }
 
     .reset-btn {
-        /* font-size: 15px; */
         box-shadow: none;
     }
 
@@ -149,7 +148,10 @@ button:hover {
     }
 
     .reset-btn {
-        /* font-size: 15px; */
+        box-shadow: none;
+    }
+
+    .reset-btn:hover {
         box-shadow: none;
     }
 }
