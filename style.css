@@ -108,7 +108,6 @@ button:hover {
         display: flex;
         flex-direction: row;
     }
-<<<<<<< HEAD
 
     .reset-btn {
         /* font-size: 15px; */
@@ -118,13 +117,11 @@ button:hover {
     .reset-btn:hover {
         box-shadow: none;
     }
-=======
     
     .footer {
         display: none;
     }
     
->>>>>>> ec67b76d9779ee22b29aa8e2896a733b891e6f3b
 
     .rock,
     .paper,
