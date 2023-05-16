@@ -4,6 +4,7 @@ const paper = document.getElementById('paper-btn');
 const scissors = document.getElementById('scissors-btn');
 const resetBtn = document.querySelector('.reset-btn');
 
+
 let rockCounter = 0;
 let paperCounter = 0;
 let scissorsCounter = 0;
