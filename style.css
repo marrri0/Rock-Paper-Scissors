@@ -110,7 +110,7 @@ button:hover {
     }
     
     .footer {
-        padding: 4px;
+        display: none;
     }
     
 
