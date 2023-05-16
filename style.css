@@ -109,6 +109,10 @@ button:hover {
         flex-direction: row;
     }
     
+    .footer {
+        padding: 4px;
+    }
+    
 
     .rock,
     .paper,
