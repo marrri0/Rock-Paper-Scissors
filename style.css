@@ -1,6 +1,11 @@
 @font-face {
     font-family: pixel-font;
-    src:url(./fonts/04b_30/04B_30__.TTF);
+    src: url(./fonts/04b_30/04B_30__.TTF);
+}
+
+@font-face {
+    font-family: pixel-font2;
+    src: url(./fonts/pixel_bit/PixelBit-Free.ttf);
 }
 
 body {
@@ -62,12 +67,20 @@ button:hover {
     font-family: pixel-font;
     text-shadow: 0px 0px 10px #dddddd;
     font-size: 50px;
+    animation: header-animation 2s ease-in;
 }
 
 #para {
-    margin-top: 100px;
+    margin-top: 40px;
     font-family: pixel-font;
-    color: yellow;
+    color: mediumseagreen;
+    font-size: 30px;
+    animation: para-animation 2s ease-in;
+}
+
+#scorePanel {
+    font-family: pixel-font;
+    animation: score-animation 1s ease-in;
 }
 
 .rock,
@@ -83,7 +96,53 @@ button:hover {
     position: absolute;
     bottom: 0;
     padding: 10px;
+    text-align: end;
 }
+
+@keyframes header-animation {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    50% {
+      opacity: 0.40;
+      transform: translateY(8px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes para-animation {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      50% {
+        opacity: 0.40;
+        transform: translateX(8px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+  }
+
+  @keyframes score-animation {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      50% {
+        opacity: 1;
+        transform: translateX(8px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+  }
 
 @media only screen and (max-width: 900px) {
     body {
@@ -101,7 +160,7 @@ button:hover {
     }
 
     #para {
-        margin-top: 140px;
+        margin-top: 85px;
     }
     
     .btn {
@@ -139,7 +198,8 @@ button:hover {
     }
 
     #para {
-        margin-top: 44px;
+        margin-top: 30px;
+        font-size: 20px;
     }
     
     .title {

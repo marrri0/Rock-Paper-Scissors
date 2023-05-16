@@ -5,22 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link rel="icon" href="/img/logo.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1 class="title">Pick Your Weapon</h1>
     <div class="btn">
-        <button id="rock-btn">
-            <img class="rock" src="./img/zombie-rock.png" alt="Rock">
+        <button id="rock-btn" class="selection">
+            <img class="rock" src="./img/zombie-rock.png" alt="rock">
         </button>
-        <button id="paper-btn">
-            <img class="paper" src="./img/zombie-paper.png" alt="Paper">
+        <button id="paper-btn" class="selection">
+            <img class="paper" src="./img/zombie-paper.png" alt="paper">
         </button>
-        <button id="scissors-btn">
-            <img class="scissors" src="./img/zombie-scissors.png" alt="Scissors">
+        <button id="scissors-btn" class="selection">
+            <img class="scissors" src="./img/zombie-scissors.png" alt="scissors">
         </button>
     </div>
-    <p id="para"> Ready? </p>
+
+    <div class="score-result">
+        <p id="para">READY?</p>
+        <p id="scorePanel">HUMANITY 0 - 0 MACHINES</p>
+    </div>
+
     <div class="reset-btn-container">
         <button class="reset-btn">RESTART</button>
     </div>
