@@ -1,6 +1,16 @@
+// Simulating page load delay
+setTimeout(function() {
+    document.querySelector('.loader').style.display = 'none';
+    document.querySelector('.body-container').style.display = 'flex';
+    document.querySelector('.body-container').style.flexDirection = 'column';
+
+}, 6000);
+
+
 const para = document.getElementById('para');
 const resetBtn = document.querySelector('.reset-btn');
 const playBtn = document.querySelectorAll('.selection');
+const choices = document.getElementById('choices')
 
 let playerSelection;
 let computerSelection;
@@ -18,6 +28,7 @@ playBtn.forEach((selection) => {
         game();
         if (playerScore === 5 || computerScore === 5) {
             disableButtons();
+            resetBtn.style.display = 'block'
         };
     });
 });
@@ -34,6 +45,7 @@ function playRound(playerSelection, computerSelection) {
     computerSelection = getComputerChoice();
     
     if (playerSelection === computerSelection) {
+        choices.innerHTML = `${playerSelection} ${computerSelection}`
         return `Tie Game!`
     } else if (
         (computerSelection === "rock" && playerSelection === "paper" )||
@@ -41,30 +53,31 @@ function playRound(playerSelection, computerSelection) {
         (computerSelection === 'scissors' && playerSelection === 'rock')
         ) {
             playerScore++;
-            return `You Win! ${playerSelection} beats ${computerSelection}`;
+            choices.innerHTML = `${playerSelection} ${computerSelection}`;
+            return `You Won`;
         } else {
             computerScore++;
-            return `You Lose! ${computerSelection} beats ${playerSelection}`
+            choices.innerHTML = `${playerSelection} ${computerSelection}`;
+            return `You Lost`
         };
 }; 
 
 function game() {
-    let RoundGame = para;
-    let score = scorePanel;
-
-    RoundGame.textContent = playRound(playerSelection, computerSelection);
-    score.innerHTML = `HUMANITY ${playerScore} - ${computerScore} MACHINES`;
+    para.innerHTML = playRound(playerSelection, computerSelection);
+    scorePanel.innerHTML = `HUMANITY ${playerScore} - ${computerScore} MACHINES`;
 
     if (playerScore === 5) {
-        para.innerHTML = `ALL HAIL THE NEW CHAMP!`
-        score.style.color = 'yellow'
-        RoundGame.style.color = 'yellow'
-        RoundGame.style.textShadow = "0px 0px 15px #fff"
+        para.innerHTML = `PLAYAAA`;
+        scorePanel.style.color = 'yellow';
+        para.style.color = 'yellow';
+        para.style.textShadow = "0px 0px 15px #000";
+        choices.style.display = 'none';
     } else if (computerScore === 5) {
-        para.innerHTML = `DID YOU JUST LOSE TO A MACHINE? UGH...`;
-        score.style.color = 'red'
-        RoundGame.style.color = 'red'
-        RoundGame.style.textShadow = "0px 0px 15px #fff"
+        para.innerHTML = `WELL DONE HUMAN`;
+        scorePanel.style.color = 'red';
+        para.style.color = 'red';
+        para.style.textShadow = "0px 0px 15px #000";
+        choices.style.display = 'none';
     }
 }; 
 // disables the choice buttons when the game reaches its goal

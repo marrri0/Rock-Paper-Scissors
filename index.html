@@ -1,35 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
-    <link rel="icon" href="./img/logo.png">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1 class="title">Pick Your Weapon</h1>
-    <div class="btn">
-        <button id="rock-btn" class="selection">
-            <img class="rock" src="./img/zombie-rock.png" alt="rock">
-        </button>
-        <button id="paper-btn" class="selection">
-            <img class="paper" src="./img/zombie-paper.png" alt="paper">
-        </button>
-        <button id="scissors-btn" class="selection">
-            <img class="scissors" src="./img/zombie-scissors.png" alt="scissors">
-        </button>
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rock Paper Scissors</title>
+        <link rel="icon" href="./img/logo.png">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="loading-page.css">
+    </head>
+    <body>
+        <div class="loader">
+            <h1 class="loader-h1">ROCK PAPER SCISSORS</h1>
+            <h1 class="loader-h2">
+                <span class="span-1">CAN</span>
+                <span class="span-2">YOU</span>
+                <span class="span-3">BEAT</span>
+                <span class="span-4">THE</span>
+                <span class="span-5">MACHINE ?</span>
+            </h1>
+            <h3 class="loader-h3">FIRST TO 5 WINS</h3>
+            <h1 class="loading-sign">LOADING</h1>
+        </div>
+        <div class="body-container">
+            <div class="header-container">
+                <h1 class="title">Pick Your Weapon</h1> 
+            </div>
 
-    <div class="score-result">
-        <p id="para">READY?</p>
-        <p id="scorePanel">HUMANITY 0 - 0 MACHINES</p>
-    </div>
+            <div class="btn">
+                <button id="rock-btn" class="selection">
+                <img class="rock" src="./img/zombie-rock.png" alt="rock">
+                </button>
+                <button id="paper-btn" class="selection">
+                <img class="paper" src="./img/zombie-paper.png" alt="paper">
+                </button>
+                <button id="scissors-btn" class="selection">
+                <img class="scissors" src="./img/zombie-scissors.png" alt="scissors">
+                </button>
+            </div>
 
-    <div class="reset-btn-container">
-        <button class="reset-btn">RESTART</button>
-    </div>
-</body>
-<script src="script.js"></script>
+            <div class="score-result">
+                <p id="para">READY?</p>
+                <p id="scorePanel">HUMANITY 0 - 0 MACHINES</p>
+                <p id="choices"></p>
+            </div>
+                <button class="reset-btn">AGAIN?</button>
+        </div>
+    </body>
+    <script src="script.js"></script>
 </html>
