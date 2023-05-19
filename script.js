@@ -51,8 +51,8 @@ playBtn.forEach((selection) => {
         let playerChoice = selection.querySelector('img');
         playerSelection = playerChoice.alt;
         computerSelection = getComputerChoice();
-        changeBorderColor();
         playSound();
+        changeBorderColor();
         game();
         if (playerScore === 5 || computerScore === 5) {
             title.style.display = 'none'
