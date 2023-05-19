@@ -99,7 +99,7 @@ button:hover {
     font-family: pixel-font2;
     font-size: 28px;
     font-weight: 600;
-    color: mediumseagreen;
+    color: #3cb371;
     text-shadow: 0 0 15px #000;
     animation: para-animation 1s ease-in;
 }
@@ -129,6 +129,10 @@ button:hover {
     width: 100px;
 }
 
+.computer-btn > button {
+box-shadow: 0 0 10px #000;
+}
+
 @keyframes header-animation {
     0% {
       opacity: 0;
@@ -147,15 +151,12 @@ button:hover {
   @keyframes para-animation {
     0% {
         opacity: 0;
-        /* transform: translateX(-30px); */
       }
       50% {
         opacity: 0;
-        /* transform: translateX(8px); */
       }
       100% {
         opacity: 1;
-        /* transform: translateX(0); */
       }
   }
 

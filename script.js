@@ -17,6 +17,7 @@ const playerText4 = `YOU DESIGNED ME JUST TO BE DEFEATED, DIDN'T YOU ?`
 
 const para = document.getElementById('para');
 const title = document.querySelector('.title');
+const scorePanel = document.getElementById('scorePanel');
 const playerBtn = document.querySelector('.player-btn');
 const computerBtn = document.querySelector('.computer-btn');
 const resetBtn = document.querySelector('.reset-btn');
@@ -28,7 +29,21 @@ let playerScore = 0;
 let computerScore = 0;
 
 // reload func
-resetBtn.addEventListener('click', () => location.reload());
+resetBtn.addEventListener('click', () => {
+    title.style.display = 'flex';
+    playerBtn.style.display = 'flex';
+    computerBtn.style.display = 'flex';
+    resetBtn.style.display = 'none';
+    playerScore = 0;
+    computerScore = 0;
+    para.innerHTML = 'READY?';
+    para.style.color = '#3cb371';
+    scorePanel.innerHTML = 'HUMANITY 0 - 0 MACHINES'
+    scorePanel.style.color = '#fff';
+
+    // resets the color of the choices border
+    resetBorderColor();
+});
 
 //player choice
 playBtn.forEach((selection) => {   
@@ -58,7 +73,7 @@ function getComputerChoice () {
 //play round
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
-        return `Draw`;
+        return para.style.opacity = '0';
     } else if (
     (computerSelection === "rock" && playerSelection === "paper" )||
     (computerSelection === "paper" && playerSelection === "scissors")||
@@ -141,6 +156,25 @@ function changeBorderColor() {
             computer_rock_border.style.borderColor = 'white';
             break;
     }    
+}
+
+function resetBorderColor() {
+    const rockBorder = document.querySelector('.rock-choice');
+    const paperBorder = document.querySelector('.paper-choice');
+    const scissorsBorder = document.querySelector('.scissors-choice');
+
+    const computer_rock_border = document.querySelector('.robot-rock-btn');
+    const computer_paper_border = document.querySelector('.robot-paper-btn');
+    const computer_scissors_border = document.querySelector('.robot-scissors-btn');
+
+    computer_rock_border.style.borderColor = 'white';
+    computer_paper_border.style.borderColor = 'white';
+    computer_scissors_border.style.borderColor = 'white';
+
+    rockBorder.style.borderColor = 'white';
+    paperBorder.style.borderColor = 'white';
+    scissorsBorder.style.borderColor = 'white';
+
 }
 
 function playSound() {
