@@ -29,12 +29,12 @@ button {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     background: transparent;
     color: #dddddd;
     border-color: #dddddd;
-    border-radius: 60px;
+    border-radius: 30px;
     box-shadow: 0px 0px 10px #dddddd;
     text-shadow: 0px 0px 5px #dddddd;
     font-size: 20px;
@@ -49,7 +49,19 @@ button:hover {
 
 .btn {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.player-btn {
+    display: flex;
+    gap: 2rem;
+}
+
+.computer-btn {
+    display: flex;
     gap: 2rem;
 }
 
@@ -71,7 +83,7 @@ button:hover {
     font-weight: 800;
     font-family: pixel-font2;
     text-shadow: none;
-    animation: para-animation 2s ease-in;
+    animation: para-animation 8s;
 }
 
 .title {
@@ -83,18 +95,21 @@ button:hover {
 }
 
 #para {
-    margin-top: 28px;
-    font-family: pixel-font;
+    margin-top: 70px;
+    font-family: pixel-font2;
+    font-size: 28px;
+    font-weight: 600;
     color: mediumseagreen;
     text-shadow: 0 0 15px #000;
-    font-size: 28px;
-    animation: para-animation 3s ease-in;
+    animation: para-animation 1s ease-in;
 }
 
 #scorePanel {
     font-family: pixel-font;
+    font-size: 20px;
     animation: score-animation 1s ease-in;
-    margin-top: 60px;
+    margin-top: 30px;
+    text-shadow: 0 0 20px #000;
 }
 
 #choices {
@@ -105,6 +120,12 @@ button:hover {
 .rock,
 .paper,
 .scissors {
+    width: 54px;
+}
+
+.robot-rock,
+.robot-paper,
+.robot-scissors {
     width: 100px;
 }
 
@@ -180,29 +201,34 @@ button:hover {
 @media only screen and (max-width: 900px) {
     body {
         display: flex;
-        background-image: url(./img/portrait-bg.jpg);
+        background-image: url(./img/landscape-bg.jpg);
         justify-content: center;
         align-items: center;
         height: auto;
     }
 
     button {
-        width: 85px;
-        height: 85px;
-        border-radius: 30px;
+        width: 50px;
+        height: 50px;
+        border-radius: 15px;
     }
 
     #para {
-        margin-top: 85px;
+        margin-top: 135px;
     }
 
     #scorePanel {
-        margin-top: 68px;
+        margin-top: 0;
+        font-size: 15px;
+    }
+
+    .title {
+        margin-bottom: 50px;
     }
     
     .btn {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
 
     .reset-btn {
@@ -218,7 +244,13 @@ button:hover {
     .rock,
     .paper,
     .scissors {
-        width: 40px;
+        width: 23px;
+    }
+
+    .robot-rock,
+    .robot-paper,
+    .robot-scissors {
+        width: 46px;
     }
 }
 

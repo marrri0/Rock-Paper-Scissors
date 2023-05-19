@@ -34,6 +34,13 @@
     display: none;
 }
 
+footer {
+    font-family: pixel-font;
+    position: absolute;
+    bottom: 0;
+    margin: 5px;
+}
+
 @keyframes loading {
     0% {
         opacity: 0.15;
