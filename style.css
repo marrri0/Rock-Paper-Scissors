@@ -73,6 +73,14 @@ button:hover {
     animation: rock-selection-animation 1s ease-in-out;
 }
 
+.rock-choice {
+    animation: rock-selection-animation 1.5s ease-in-out;
+}
+
+.scissors-choice {
+    animation: scissors-selection-animation 1.5s ease-in-out;
+}
+
 .reset-btn {
     margin: 0 auto;
     margin-top: 15px;

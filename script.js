@@ -9,11 +9,12 @@ const computerText = `Try again in like a million years of evolution`;
 const computerText2 = `I can't believe your kind created me`;
 const computerText3 = `Wow You really lost to a machine. Impressive`;
 const computerText4 = `I'm trying to be less offensive. but SERIOUSLY ?`;
+const computerText5 = `YOU GOT COCKED !!!`;
 
-const playerText = `Impressive human... You are Good at this`
-const playerText2 = `WOWOWWIWAA You finally beat me`
-const playerText3 = `Good Game. Human`
-const playerText4 = `YOU DESIGNED ME JUST TO BE DEFEATED, DIDN'T YOU ?`
+const playerText = `Impressive human... You are Good at this`;
+const playerText2 = `WOWOWIWAA You finally beat me`;
+const playerText3 = `Good Game. Human`;
+const playerText4 = `YOU DESIGNED ME JUST TO BE DEFEATED, DIDN'T YOU ?`;
 
 const para = document.getElementById('para');
 const title = document.querySelector('.title');
@@ -101,7 +102,7 @@ function game() {
         para.style.opacity = '1';
         playWinnerSound();
     } else if (computerScore === 5) {
-        const computerWinDisplay = [computerText, computerText2, computerText3, computerText4];
+        const computerWinDisplay = [computerText, computerText2, computerText3, computerText4, computerText5];
         const cIndex = Math.floor(Math.random() * computerWinDisplay.length)
         para.innerHTML = computerWinDisplay[cIndex];
         scorePanel.style.color = 'red';
