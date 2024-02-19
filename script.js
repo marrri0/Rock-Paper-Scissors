@@ -9,7 +9,7 @@ const computerText = `Try again in like a million years of evolution`;
 const computerText2 = `I can't believe your kind created me`;
 const computerText3 = `Wow You really lost to a machine. Impressive`;
 const computerText4 = `I'm trying to be less offensive. but SERIOUSLY ?`;
-const computerText5 = `YOU GOT COCKED !!!`;
+const computerText5 = `YOU GOT COOKED !!!`;
 
 const playerText = `Impressive human... You are Good at this`;
 const playerText2 = `WOWOWIWAA You finally beat me`;
